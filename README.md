@@ -6,6 +6,7 @@
 
 ```bash
 
-    npm install nodejs-return-data
+    npm nodejs-return-status
 
 ```
+
