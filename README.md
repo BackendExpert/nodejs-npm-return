@@ -99,4 +99,13 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ## License
 
-This package is licensed under the .
+This package is licensed under the [MIT License](https://github.com/BackendExpert/nodejs-npm-return/blob/master/LICENSE)
+
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch 
+3. Commit your changes 
+4. Push to the branch 
+5. Create a new Pull Request.
