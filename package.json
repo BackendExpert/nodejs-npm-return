@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-return-data",
+  "version": "1.0.0",
+  "description": "NodeJS Retrun data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BackendExpert/nodejs-npm-return.git"
+  },
+  "keywords": [
+    "NodeJS"
+  ],
+  "author": "jehankandy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BackendExpert/nodejs-npm-return/issues"
+  },
+  "homepage": "https://github.com/BackendExpert/nodejs-npm-return#readme"
+}
