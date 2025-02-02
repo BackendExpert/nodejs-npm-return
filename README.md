@@ -91,5 +91,12 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 
 ```
+- <b>Status Codes and Responses</b>
+
+- `200 OK`: Returned by ReturnSuccessMsg() to indicate successful operation.
+- `409 Conflict`: Returned by ReturnResourceExists() to indicate a conflict (e.g., when a resource already exists).
 
 
+## License
+
+This package is licensed under the .
