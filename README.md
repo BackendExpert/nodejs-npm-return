@@ -81,7 +81,7 @@ app.post('/register', (req, res) => {
     const userExists = email === 'existinguser@example.com';
 
     if (userExists) {
-        return ReturnResourceExists(res); // Resource already exists
+        return ReturnResourceExists(res, "User Already exists"); // Resource already exists
     }
 
     return ReturnSuccessMsg(res, "User Registered");
