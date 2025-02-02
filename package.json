@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-return-data",
+  "name": "nodejs-return-status",
   "version": "1.0.0",
-  "description": "NodeJS Retrun data",
+  "description": "NodeJS Retrun Status",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/BackendExpert/nodejs-npm-return.git"
   },
   "keywords": [
-    "NodeJS"
+    "NodeJS", "MERN", "BackEnd"
   ],
   "author": "jehankandy",
   "license": "ISC",
