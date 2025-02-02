@@ -3,7 +3,7 @@ function ReturnSuccess(res){
 }
 
 function ReturnSuccessMsg(res, msg){
-    return res.status(200).json({ Status: "Success", Message: msg})
+    return res.status(200).json({ Status: "Success", Message: msg })
 }
 
 function ReturnResourceExists(res, Error){
