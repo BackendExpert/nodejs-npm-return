@@ -10,4 +10,8 @@ function ReturnResourceExists(res, Error){
     return res.status(409).json({ Error: Error})
 }
 
-module.exports = { ReturnSuccess, ReturnSuccessMsg, ReturnResourceExists };
+function ReturnInternalServerError(res, Error){
+    return res.status(500).json({ Error: Error })
+}
+
+module.exports = { ReturnSuccess, ReturnSuccessMsg, ReturnResourceExists, ReturnInternalServerError };
