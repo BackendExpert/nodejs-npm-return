@@ -20,7 +20,7 @@ You can import the functions in your project like this:
 
 ```js
 
-const { ReturnSuccessMsg, ReturnResourceExists } = require('nodejs-return-data');
+const { ReturnSuccessMsg, ReturnResourceExists } = require('nodejs-return-status');
 
 ```
 
@@ -37,9 +37,59 @@ const { ReturnSuccessMsg, ReturnResourceExists } = require('nodejs-return-data')
 
 ### ReturnSuccessMsg(res, msg)
 
-- Returns a success response with a custom message and a 200 OK status code.
+- Returns a success response with a custom message and a `200` OK status code.
 
 <b>Parameters</b>
 
 - `res`: The response object from Express.
-- `msg`: The message to include in the response. (optional, default is "Resource Already Exists")
+- `msg`: Message that you need to send
+
+### ReturnResourceExists(res, Error)
+
+- Returns an error response with a `409` Conflict status code, indicating that the resource already exists.
+
+<b>Parameters</b>
+
+- `res`: The response object from Express.
+- `Error`: Error Message that you need to send
+
+
+### ReturnInternalServerError(res, Error)
+
+- Returns an error response with a `500` Internal Server Error status code.
+
+<b>Parameters</b>
+
+- `res`: The response object from Express.
+- `Error`: Error Message that you need to send
+
+
+## Example Usage
+
+```js
+
+const express = require('express');
+const { ReturnSuccessMsg, ReturnResourceExists } = require('nodejs-return-status');
+
+const app = express();
+
+// Example Route to register a user
+app.post('/register', (req, res) => {
+    const { email } = req.body;
+
+    // Simulate checking if user already exists
+    const userExists = email === 'existinguser@example.com';
+
+    if (userExists) {
+        return ReturnResourceExists(res); // Resource already exists
+    }
+
+    return ReturnSuccessMsg(res, "User Registered");
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));
+
+
+```
+
+
