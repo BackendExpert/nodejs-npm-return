@@ -6,4 +6,8 @@ function ReturnSuccessMsg(res, msg){
     return res.status(200).json({ Status: "Success", Message: msg})
 }
 
-module.exports = { ReturnSuccess, ReturnSuccessMsg };
+function ReturnResourceExists(res, Error){
+    return res.status(409).json({ Error: Error})
+}
+
+module.exports = { ReturnSuccess, ReturnSuccessMsg, ReturnResourceExists };
